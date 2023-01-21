@@ -1,4 +1,4 @@
-require("dotenv").config;
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -6,6 +6,29 @@ const path = require("path");
 const morgan = require("morgan");
 const hbs = require("hbs");
 const Router = require("./routes");
+const APIRouter = require('./routes');
+const mongoose = require('mongoose');
+
+// Connect to database
+const DB_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.PROD_DB
+    : process.env.LOCAL_DB;
+
+mongoose.set('strictQuery', false);
+
+const options = {
+  autoIndex: true, // Don't build indexes
+  maxPoolSize: 10, // Maintain up to 10 socket connections
+  serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+  socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
+  family: 4 // Use IPv4, skip trying IPv6
+};
+
+mongoose
+  .connect(DB_URL, options)
+  .then(() => console.log(`Connected to ${process.env.NODE_ENV} database`))
+  .catch((err) => console.log("Error in database connection", err));
 
 // ==========MiddleWares==========
 app.use(bodyParser.json());
@@ -14,7 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 //==============Static===========
-app.use(express.static(path.join(__dirname,"public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 //===========Views===========
 app.set("view engine", "hbs");
@@ -31,6 +54,7 @@ hbs.registerHelper("limit", function (arr, limit) {
 });
 
 app.use("/", Router);
+app.use("/api", APIRouter);
 
 app.use(function (req, res, next) {
   res.status(404);

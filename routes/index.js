@@ -1,3 +1,5 @@
+const { createContact } = require("./controller");
+
 const Router = require("express").Router();
 Router.get("/", (req, res) => {
   res.render("index");
@@ -31,5 +33,8 @@ Router.get("/blogs/:blog", (req, res) => {
 Router.get("/pricing", (req, res) => {
   res.render("pricing", {});
 });
+
+
+Router.post("/contact", createContact);
 
 module.exports = Router;
