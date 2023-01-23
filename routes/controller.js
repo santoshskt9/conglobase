@@ -2,6 +2,7 @@ const router = require("express").Router();
 const mongoose = require("mongoose");
 const contactModel = require("../models/contact.model");
 const aboutModel = require("../models/about.model");
+const categoryModel = require("../models/category.model");
 
 const createContact = async (req, res) => {
     // populating the model
@@ -91,9 +92,33 @@ const createSubscribe = async (req, res) => {
         });
 };
 
+const createCategory = async (req, res) => {
+    const category = new categoryModel(req.body);
+    console.log("Before Storing: ", req.body);
+    category
+        .save()
+        .then((docs) => {
+            // sending response with auth token
+            console.log("After Storing: ", docs);
+            res.json(docs);
+        })
+        .catch(({ errors }) => {
+            let errKey = Object.keys(errors)[0];
+            if (errKey) {
+                return res.status(409).json({
+                    error: errors[errKey].properties.message,
+                    errorField: errors[errKey].properties.path,
+                });
+            } else {
+                return res.sendStatus(400);
+            }
+        });
+}
+
 module.exports = {
     createContact,
     createAbout,
     createService,
     createSubscribe,
+    createCategory,
 }

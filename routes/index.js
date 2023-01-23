@@ -1,4 +1,6 @@
-const { createContact } = require("./controller");
+const categoryModel = require("../models/category.model");
+const serviceModel = require("../models/service.model");
+const { createContact, createCategory } = require("./controller");
 
 const Router = require("express").Router();
 Router.get("/", (req, res) => {
@@ -12,8 +14,10 @@ Router.get("/contact", (req, res) => {
     message: "Contact Me Here",
   });
 });
-Router.get("/services", (req, res) => {
-  res.render("services", {});
+Router.get("/services", async (req, res) => {
+  const categories = await categoryModel.find();
+  console.log("Services: ", categories);
+  res.render("services", {categories});
 });
 Router.get("/services/:service", (req, res) => {
   res.render("service-detail", {});
@@ -36,5 +40,6 @@ Router.get("/pricing", (req, res) => {
 
 
 Router.post("/contact", createContact);
+Router.post("/category", createCategory);
 
 module.exports = Router;

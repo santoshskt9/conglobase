@@ -34,7 +34,7 @@ mongoose
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 //==============Static===========
 app.use(express.static(path.join(__dirname, "public")));
