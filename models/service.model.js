@@ -17,9 +17,9 @@ const serviceModel = new mongoose.Schema(
             required: [true, "Description is required"],
             default: null,
         },
-        catagory: {
-            type: String,
-            required: [true, "Category is required"],
+        category: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'category'
         },
         about: {
             type: {

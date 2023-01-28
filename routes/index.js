@@ -18,19 +18,18 @@ Router.get("/contact", (req, res) => {
   });
 });
 Router.get("/services", async (req, res) => {
-  await categoryModel.find().then((categories) => {
-    const data = categories.map(async (category) => {
-      // console.log(category._id);
-      await serviceModel.find({ category: category._id }).then((services) => {
-        console.log({ ...category, services });
-        return { ...category, services };
-      });
-    });
-    return res.render("services", { data, categories });
+  const services = await serviceModel.find().populate('category').exec(function (err, services) {
+    if (err) return console.log(err);
+    console.log(services);
   });
+  console.log("Services: ", services);
+  res.render("services2", {services});
 });
 Router.get("/services/:service", (req, res) => {
   res.render("service-detail", {});
+});
+Router.get("/service-design", (req, res) => {
+  res.render("services/service-design", {});
 });
 Router.get("/portfolios", (req, res) => {
   res.render("portfolio", {});

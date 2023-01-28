@@ -13,6 +13,14 @@ const categoryModel = new mongoose.Schema(
         description: {
             type: String,
             default: null,
+        },
+        iconUrl: {
+            type: String,
+            default: null,
+        },
+        path: {
+            type: String,
+            default: null,
         }
     },
     {

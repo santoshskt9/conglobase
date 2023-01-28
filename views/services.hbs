@@ -148,121 +148,64 @@
             </div>
         </div>
     </div>
-    <!-- Development Service -->
-    <div class="section section-padding bg-color-light" id="section2">
-        <div class="container">
-            <div class="section-heading heading-left">
-                <span class="subtitle">Service</span>
-                <h2 class="title">Development</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-31.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-development.html">Content Managment</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
-                            <a href="service-development.html" class="more-btn">Find out more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-32.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-development.html">Mobile app development</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
-                            <a href="service-development.html" class="more-btn">Find out more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-33.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-development.html">eCommerce</a></h5>
-                            <p>We design professional looking yet Mobile Apps. Our designs are search engine
-                                and user friendly. </p>
-                            <a href="service-development.html" class="more-btn">Find out more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</section>
+<!--=====================================-->
+<!--=       Service  Area Start        =-->
+<!--=====================================-->
+<section class="section section-padding bg-color-light">
+    <div class="container">
+        <div class="section-heading heading-left">
+            <span class="subtitle">What We Can Do For You</span>
+            <h2 class="title">Services we can <br> help you with</h2>
         </div>
-    </div>
-    <!-- Online Marketing Service -->
-    <div class="section section-padding" id="section3">
-        <div class="container">
-            <div class="section-heading heading-left">
-                <span class="subtitle">Service</span>
-                <h2 class="title">Online Marketing</h2>
+        <div class="row">
+            {{#each services}}
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                <div class="services-grid service-style-2">
+                    <div class="thumbnail">
+                        <img src={{this.iconUrl}} alt="icon">
+                    </div>
+                    <div class="content">
+                        <h5 class="title"> <a href="service-design.html">{{this.name}}</a></h5>
+                        <p>{{this.description}}Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                        {{!-- {{console.log("cat: ", categories)}} --}}
+                        <a href="service-design.html" class="more-btn">Find out more</a>
+                    </div>
+                </div>
+            </div>{{/each}}
+            {{!-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                <div class="services-grid service-style-2">
+                    <div class="thumbnail">
+                        <img src="assets/media/icon/icon-2.png" alt="icon">
+                    </div>
+                    <div class="content">
+                        <h5 class="title"> <a href="service-development.html">Development</a></h5>
+                        <p>Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                        <a href="service-development.html" class="more-btn">Find out more</a>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-34.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-marketing.html">SEO</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
-                            <a href="service-marketing.html" class="more-btn">Find out more</a>
-                        </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="services-grid service-style-2">
+                    <div class="thumbnail">
+                        <img src="assets/media/icon/icon-3.png" alt="icon">
+                    </div>
+                    <div class="content">
+                        <h5 class="title"> <a href="service-marketing.html">Online Marketing</a></h5>
+                        <p>Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                        <a href="service-marketing.html" class="more-btn">Find out more</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-35.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-marketing.html">Pay-per click</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
-                            <a href="service-marketing.html" class="more-btn">Find out more</a>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="services-grid service-style-2">
+                    <div class="thumbnail">
+                        <img src="assets/media/icon/icon-4.png" alt="icon">
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-36.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-marketing.html">Email marketing</a></h5>
-                            <p>We design professional looking yet Mobile Apps. Our designs are search engine
-                                and user friendly. </p>
-                            <a href="service-marketing.html" class="more-btn">Find out more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-37.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-marketing.html">Display marketing</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
-                            <a href="service-marketing.html" class="more-btn">Find out more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                    <div class="services-grid service-style-2">
-                        <div class="thumbnail">
-                            <img src="/assets/media/icon/icon-38.png" alt="icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title"> <a href="service-marketing.html">Social Media marketing</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
-                            <a href="service-marketing.html" class="more-btn">Find out more</a>
-                        </div>
+                    <div class="content">
+                        <h5 class="title"> <a href="service-business.html">Business</a></h5>
+                        <p>Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                        <a href="service-business.html" class="more-btn">Find out more</a>
                     </div>
                 </div>
             </div>
@@ -326,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- Technology Service -->
