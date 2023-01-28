@@ -4,7 +4,8 @@
   "description": "This is official repository of conglobase.com, We are a full-service company that offers a range of services including software development, data analysis, and project management. We work with clients to understand their specific needs and goals, and then tailor our solutions to meet those needs.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js -e js,hbs",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

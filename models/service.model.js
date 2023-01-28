@@ -7,6 +7,11 @@ const serviceModel = new mongoose.Schema(
             required: [true, "Service Title is required"],
             default: null,
         },
+        img: {
+            type: String,
+            required: [true, "Service Title is required"],
+            default: null,
+        },
         desc: {
             type: String,
             required: [true, "Description is required"],

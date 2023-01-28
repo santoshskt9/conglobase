@@ -6,6 +6,10 @@ const categoryModel = new mongoose.Schema(
             type: String,
             default: null,
         },
+        iconUrl: {
+            type: String,
+            default: null,
+        },
         description: {
             type: String,
             default: null,
