@@ -3,8 +3,11 @@ const serviceModel = require("../models/service.model");
 const { createContact, createCategory } = require("./controller");
 
 const Router = require("express").Router();
-Router.get("/", (req, res) => {
-  res.render("index");
+
+
+Router.get("/", async (req, res) => {
+  const categories = await categoryModel.find();
+  res.render("index", {categories});
 });
 Router.get("/about", (req, res) => {
   res.render("about-us");
@@ -15,12 +18,18 @@ Router.get("/contact", (req, res) => {
   });
 });
 Router.get("/services", async (req, res) => {
-  const categories = await categoryModel.find();
-  console.log("Services: ", categories);
-  res.render("services", {categories});
+  const services = await serviceModel.find().populate('category').exec(function (err, services) {
+    if (err) return console.log(err);
+    console.log(services);
+  });
+  console.log("Services: ", services);
+  res.render("services2", {services});
 });
 Router.get("/services/:service", (req, res) => {
   res.render("service-detail", {});
+});
+Router.get("/service-design", (req, res) => {
+  res.render("services/service-design", {});
 });
 Router.get("/portfolios", (req, res) => {
   res.render("portfolio", {});
