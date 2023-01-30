@@ -6,10 +6,6 @@ const categoryModel = new mongoose.Schema(
             type: String,
             default: null,
         },
-        iconUrl: {
-            type: String,
-            default: null,
-        },
         description: {
             type: String,
             default: null,
@@ -21,7 +17,16 @@ const categoryModel = new mongoose.Schema(
         path: {
             type: String,
             default: null,
-        }
+        },
+        services: {
+            type: [
+                {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: 'service'
+                },
+            ],
+            default: [],
+        },
     },
     {
         timestamps: true,

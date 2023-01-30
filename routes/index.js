@@ -18,12 +18,16 @@ Router.get("/contact", (req, res) => {
   });
 });
 Router.get("/services", async (req, res) => {
-  const services = await serviceModel.find().populate('category').exec(function (err, services) {
-    if (err) return console.log(err);
-    console.log(services);
-  });
-  console.log("Services: ", services);
-  res.render("services2", {services});
+  
+  // const services = await serviceModel.find().populate('category').exec(function (err, services) {
+  //   if (err) return console.log(err);
+  //   console.log(services);
+  // });
+
+  const categories = await categoryModel.find().populate({path:'services',});
+
+  console.log("Services: ", categories);
+  res.render("services2", {categories});
 });
 Router.get("/services/:service", (req, res) => {
   res.render("service-detail", {});
