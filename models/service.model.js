@@ -17,10 +17,14 @@ const serviceModel = new mongoose.Schema(
             required: [true, "Description is required"],
             default: null,
         },
-        // category: {
-        //     type: mongoose.Schema.Types.ObjectId,
-        //     ref: 'category'
-        // },
+        category: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'category'
+        },
+        slug: {
+            type: String,
+            default: null,
+        },
         about: {
             type: {
                 title: {

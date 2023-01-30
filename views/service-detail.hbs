@@ -1,15 +1,14 @@
-
 <!--=====================================-->
 <!--=       Breadcrumb Area Start       =-->
 <!--=====================================-->
 <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
         <div class="section-heading heading-left" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="300">
-            <h1 class="title h2">Design</h1>
-            <p>Give your business a unique logo to stand out from the crowd. We’ll create custom logo for your company.</p>
+            <h1 class="title h2">{{serviceDetails.title}}</h1>
+            <p>{{serviceDetails.desc}}</p>
         </div>
         <div class="banner-thumbnail" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="400">
-            <img class="paralax-image" src="/assets/media/banner/banner-thumb-4.png" alt="Illustration">
+            <img class="paralax-image" src={{serviceDetails.img}} alt="Illustration">
         </div>
     </div>
     <ul class="shape-group-8 list-unstyled">
@@ -34,43 +33,49 @@
                 <div class="why-choose-us">
                     <div class="section-heading heading-left">
                         <span class="subtitle">About Us</span>
-                        <h3 class="title">Why branding matters?</h3>
-                        <p>Ut condimentum enim nec diam convallis mollis. Sed felis quam, semper dapibus purus sed, rhoncus ullamcorper lacus.</p>
+                        <h3 class="title">{{serviceDetails.about.title}}</h3>
+                        <p>{{serviceDetails.about.description}}</p>
                     </div>
                     <div class="accordion" id="choose-accordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <i class="far fa-compress"></i> Strategy
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#choose-accordion">
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#choose-accordion">
                                 <div class="accordion-body">
-                                    Aenean hendrerit laoreet vehicula. Nullam convallis augue at enim gravida pellentesque.
+                                    {{serviceDetails.about.strategy}}
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     <i class="far fa-code"></i>Design
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#choose-accordion">
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#choose-accordion">
                                 <div class="accordion-body">
-                                    Aenean hendrerit laoreet vehicula. Nullam convallis augue at enim gravida pellentesque.
+                                    {{serviceDetails.about.design}}
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     <i class="fal fa-globe"></i>Development
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#choose-accordion">
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#choose-accordion">
                                 <div class="accordion-body">
-                                    Aenean hendrerit laoreet vehicula. Nullam convallis augue at enim gravida pellentesque.
+                                    {{serviceDetails.about.development}}
                                 </div>
                             </div>
                         </div>
@@ -94,7 +99,8 @@
                             <input type="tel" class="form-control" name="Phone" placeholder="+123456789">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="axil-btn btn-fill-primary btn-fluid" name="submit-btn">Get Pricing Now</button>
+                            <button type="submit" class="axil-btn btn-fill-primary btn-fluid" name="submit-btn">Get
+                                Pricing Now</button>
                         </div>
                     </form>
                 </div>
@@ -109,17 +115,18 @@
     <div class="container">
         <div class="section-heading mb--90">
             <span class="subtitle">Process</span>
-            <h2 class="title">Our logo design process</h2>
-            <p>Our comprehensive logo design strategy ensures a perfectly crafted logo for your business.</p>
+            <h2 class="title">{{serviceDetails.process.title}}</h2>
+            <p>{{serviceDetails.process.subtitle}}</p>
         </div>
+        {{!-- {{#each serviceDetails.process.steps}} --}}
         <div class="process-work" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
             <div class="thumbnail paralax-image">
                 <img src="/assets/media/others/process-1.png" alt="Thumbnail">
             </div>
             <div class="content">
-                <span class="subtitle">Step One</span>
-                <h3 class="title">Discover</h3>
-                <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                <span class="subtitle">{{serviceDetails.process.steps.0.stepName}}</span>
+                <h3 class="title">{{serviceDetails.process.steps.0.heading}}</h3>
+                <p>{{serviceDetails.process.steps.0.desc}}</p>
             </div>
         </div>
         <div class="process-work content-reverse" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100">
@@ -127,9 +134,9 @@
                 <img src="/assets/media/others/process-2.png" alt="Thumbnail">
             </div>
             <div class="content">
-                <span class="subtitle">Step Two</span>
-                <h3 class="title">Prototype</h3>
-                <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                <span class="subtitle">{{serviceDetails.process.steps.1.stepName}}</span>
+                <h3 class="title">{{serviceDetails.process.steps.1.heading}}</h3>
+                <p>{{serviceDetails.process.steps.1.desc}}</p>
             </div>
         </div>
         <div class="process-work" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
@@ -137,9 +144,9 @@
                 <img src="/assets/media/others/process-3.png" alt="Thumbnail">
             </div>
             <div class="content">
-                <span class="subtitle">Step Three</span>
-                <h3 class="title">Test</h3>
-                <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                <span class="subtitle">{{serviceDetails.process.steps.2.stepName}}</span>
+                <h3 class="title">{{serviceDetails.process.steps.2.heading}}</h3>
+                <p>{{serviceDetails.process.steps.2.desc}}</p>
             </div>
         </div>
         <div class="process-work content-reverse" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100">
@@ -147,11 +154,12 @@
                 <img src="/assets/media/others/process-4.png" alt="Thumbnail">
             </div>
             <div class="content">
-                <span class="subtitle">Step four</span>
-                <h3 class="title">Build</h3>
-                <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                <span class="subtitle">{{serviceDetails.process.steps.3.stepName}}</span>
+                <h3 class="title">{{serviceDetails.process.steps.3.heading}}</h3>
+                <p>{{serviceDetails.process.steps.3.desc}}</p>
             </div>
         </div>
+        {{!-- {{/each}} --}}
     </div>
     <ul class="shape-group-17 list-unstyled">
         <li class="shape shape-1"><img src="/assets/media/others/bubble-24.png" alt="Bubble"></li>

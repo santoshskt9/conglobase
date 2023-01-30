@@ -29,8 +29,10 @@ Router.get("/services", async (req, res) => {
   console.log("Services: ", categories);
   res.render("services2", {categories});
 });
-Router.get("/services/:service", (req, res) => {
-  res.render("service-detail", {});
+Router.get("/services/:service", async (req, res) => {
+  const serviceDetails = await serviceModel.findOne({slug: req.params.service}).populate({path:'category'});
+  console.log("Single Service: ", serviceDetails);
+  res.render("service-detail", {serviceDetails});
 });
 Router.get("/service-design", (req, res) => {
   res.render("services/service-design", {});

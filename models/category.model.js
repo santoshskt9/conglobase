@@ -14,7 +14,7 @@ const categoryModel = new mongoose.Schema(
             type: String,
             default: null,
         },
-        path: {
+        url: {
             type: String,
             default: null,
         },

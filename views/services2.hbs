@@ -5,7 +5,8 @@
     <div class="container">
         <div class="section-heading heading-left" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="300">
             <h1 class="title h2">Best solutions for your business</h1>
-            <p>Give your business a unique logo to stand out from crowd. We’ll create logo specifically for your company.</p>
+            <p>Give your business a unique logo to stand out from crowd. We’ll create logo specifically for your
+                company.</p>
         </div>
         <div class="banner-thumbnail" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="400">
             <img class="paralax-image" src="/assets/media/banner/banner-thumb-4.png" alt="Illustration">
@@ -52,22 +53,41 @@
             </ul>
         </div>
     </nav>
-    <!-- Design Service -->
+
+    {{#each categories}}
+    <!-- Dynamic Service Component -->
     <div class="section section-padding" id="section1">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
-                <h2 class="title">Design</h2>
+                <h2 class="title">{{this.name}}</h2>
             </div>
             <div class="row">
+
+                {{#each this.services}}
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
                     <div class="services-grid service-style-2">
                         <div class="thumbnail">
                             <img src="/assets/media/icon/icon-29.png" alt="icon">
                         </div>
                         <div class="content">
+                            <h5 class="title"> <a href="services/{{this.slug}}">{{this.title}}</a></h5>
+                            <p>{{this.desc}}</p>
+                            <a href="services/{{this.slug}}" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+                {{!-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-29.png" alt="icon">
+                        </div>
+                        <div class="content">
                             <h5 class="title"> <a href="service-design.html">Logo &amp; Branding</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
                             <a href="service-design.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -79,7 +99,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-design.html">Website Design</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
                             <a href="service-design.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -104,7 +125,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-design.html">Graphic/print design</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
                             <a href="service-design.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -116,16 +138,94 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-design.html">Video production</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
+                            <a href="service-design.html" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>--}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <!-- Design Service -->
+    {{!-- <div class="section section-padding" id="section1">
+        <div class="container">
+            <div class="section-heading heading-left">
+                <span class="subtitle">Service</span>
+                <h2 class="title">Design</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-29.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h5 class="title"> <a href="service-design.html">Logo &amp; Branding</a></h5>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
+                            <a href="service-design.html" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-27.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h5 class="title"> <a href="service-design.html">Website Design</a></h5>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
+                            <a href="service-design.html" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-28.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h5 class="title"> <a href="service-design.html">Mobile app design</a></h5>
+                            <p>We design professional looking yet Mobile Apps. Our designs are search engine
+                                and user friendly. </p>
+                            <a href="service-design.html" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-4.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h5 class="title"> <a href="service-design.html">Graphic/print design</a></h5>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
+                            <a href="service-design.html" class="more-btn">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <div class="services-grid service-style-2">
+                        <div class="thumbnail">
+                            <img src="/assets/media/icon/icon-30.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h5 class="title"> <a href="service-design.html">Video production</a></h5>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
                             <a href="service-design.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Development Service -->
-    <div class="section section-padding bg-color-light" id="section2">
+    {{!-- <div class="section section-padding bg-color-light" id="section2">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
@@ -139,7 +239,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-development.html">Content Managment</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
                             <a href="service-development.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -151,7 +252,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-development.html">Mobile app development</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
                             <a href="service-development.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -171,9 +273,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Online Marketing Service -->
-    <div class="section section-padding" id="section3">
+    {{!-- <div class="section section-padding" id="section3">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
@@ -187,7 +289,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-marketing.html">SEO</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
                             <a href="service-marketing.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -199,7 +302,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-marketing.html">Pay-per click</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
                             <a href="service-marketing.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -224,7 +328,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-marketing.html">Display marketing</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
                             <a href="service-marketing.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -236,16 +341,17 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-marketing.html">Social Media marketing</a></h5>
-                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.</p>
+                            <p>From simple Content Management System to complex eCommerce developer, we cover it all.
+                            </p>
                             <a href="service-marketing.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Business Service -->
-    <div class="section section-padding bg-color-light" id="section4">
+    {{!-- <div class="section section-padding bg-color-light" id="section4">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
@@ -259,7 +365,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-business.html">Digital strategy</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
                             <a href="service-business.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -271,7 +378,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-business.html">Business consulting</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
                             <a href="service-business.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -304,9 +412,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Technology Service -->
-    <div class="section section-padding" id="section5">
+    {{!-- <div class="section section-padding" id="section5">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
@@ -320,7 +428,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-technology.html">Hosting</a></h5>
-                            <p>We design professional looking yet simple Logo. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple Logo. Our designs are search engine and user
+                                friendly.</p>
                             <a href="service-technology.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -332,16 +441,17 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-technology.html">Big data analysis</a></h5>
-                            <p>We design professional looking yet simple websites. Our designs are search engine and user friendly.</p>
+                            <p>We design professional looking yet simple websites. Our designs are search engine and
+                                user friendly.</p>
                             <a href="service-technology.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Content strategy Service -->
-    <div class="section section-padding bg-color-light" id="section6">
+    {{!-- <div class="section section-padding bg-color-light" id="section6">
         <div class="container">
             <div class="section-heading heading-left">
                 <span class="subtitle">Service</span>
@@ -355,7 +465,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-content-strategy.html">Web Audit Practices</a></h5>
-                            <p>industry-icon-1 Web Audit Practices A reputable marketing strategy company runs a complete digital,</p>
+                            <p>industry-icon-1 Web Audit Practices A reputable marketing strategy company runs a
+                                complete digital,</p>
                             <a href="service-content-strategy.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -367,7 +478,8 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-content-strategy.html">Marketing Flexibility</a></h5>
-                            <p>Do you cater to other businesses, investors, decision-makers or consumers? A trustworthy digital</p>
+                            <p>Do you cater to other businesses, investors, decision-makers or consumers? A trustworthy
+                                digital</p>
                             <a href="service-content-strategy.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
@@ -379,14 +491,15 @@
                         </div>
                         <div class="content">
                             <h5 class="title"> <a href="service-content-strategy.html">Advertising Strategy</a></h5>
-                            <p>Promoting your products and services online requires cutting-edge organic and paid search strategies to rise</p>
+                            <p>Promoting your products and services online requires cutting-edge organic and paid search
+                                strategies to rise</p>
                             <a href="service-content-strategy.html" class="more-btn">Find out more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <!--=====================================-->
 <!--=     Call To Action Area Start     =-->
