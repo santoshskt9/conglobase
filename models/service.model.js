@@ -99,6 +99,30 @@ const serviceModel = new mongoose.Schema(
             },
             default: {}
         },
+        cta: {
+            type: {
+                headline: {
+                    type: String,
+                    default: "Need a successful project?"
+                },
+                actionName: {
+                    type: String,
+                    default: "Contact us today to get started!"
+                },
+                url: {
+                    type: String,
+                    default: "contact",
+                },
+                title: {
+                    type: String,
+                    default: "Let's Work Together",
+                }
+            }
+        },
+        iconUrl: {
+            type: String,
+            default: "assets/media/icon/icon-1.png",
+        }
     },
     {
         timestamps: true,

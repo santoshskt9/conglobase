@@ -121,7 +121,7 @@
         {{!-- {{#each serviceDetails.process.steps}} --}}
         <div class="process-work" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
             <div class="thumbnail paralax-image">
-                <img src="/assets/media/others/process-1.png" alt="Thumbnail">
+                <img src={{serviceDetails.process.steps.0.imgLink}} alt="Thumbnail" style="height: 410px; width: 410px; object-fit: cover; border-radius:10px;">
             </div>
             <div class="content">
                 <span class="subtitle">{{serviceDetails.process.steps.0.stepName}}</span>
