@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const morgan = require("morgan");
 const hbs = require("hbs");
-const Router = require("./routes");
+const  Router  = require("./routes");
+// const { LoadData } = require("./routes");
 const APIRouter = require('./routes');
 const mongoose = require('mongoose');
 
@@ -16,7 +17,6 @@ const DB_URL =
     : process.env.LOCAL_DB;
 
 mongoose.set('strictQuery', false);
-
 const options = {
   autoIndex: true, // Don't build indexes
   maxPoolSize: 10, // Maintain up to 10 socket connections
@@ -27,14 +27,18 @@ const options = {
 
 mongoose
   .connect(DB_URL, options)
-  .then(() => console.log(`Connected to ${process.env.NODE_ENV} database`))
+  .then(() => {
+    console.log(`Connected to ${process.env.NODE_ENV} database`)
+    Router.LoadData()
+
+  })
   .catch((err) => console.log("Error in database connection", err));
 
 // ==========MiddleWares==========
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(morgan("dev"));
+app.use(morgan("dev"));
 
 //==============Static===========
 app.use(express.static(path.join(__dirname, "public")));
