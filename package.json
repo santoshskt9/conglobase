@@ -4,7 +4,7 @@
   "description": "This is official repository of conglobase.com, We are a full-service company that offers a range of services including software development, data analysis, and project management. We work with clients to understand their specific needs and goals, and then tailor our solutions to meet those needs.",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js -e js,hbs",
+    "dev": "nodemon server.js -e hbs,js",
     "start": "node server.js"
   },
   "repository": {

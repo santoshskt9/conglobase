@@ -1,313 +1,253 @@
 <html class="no-js" lang="en">
-  <head>
-    <!-- Meta Data -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Conglobase | Connect. Simply. Succeed</title>
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/media/favicon.ico"
-    />
-    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/font-awesome.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/slick.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/slick-theme.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/sal.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/magnific-popup.css" />
-    <link
-      rel="stylesheet"
-      href="/assets/css/vendor/green-audio-player.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/css/vendor/odometer-theme-default.css"
-    />
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/app.css" />
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Conglobase | Connect. Simply. Succeed.</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/font-awesome.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/slick.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/slick-theme.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/sal.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/magnific-popup.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/green-audio-player.min.css" />
+  <link rel="stylesheet" href="/assets/css/vendor/odometer-theme-default.css" />
 
-  </head>
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/app.css" />
 
-  <body class="sticky-header">
-    <a href="#main-wrapper" id="backto-top" class="back-to-top">
-      <i class="far fa-angle-double-up"></i>
-    </a>
-    <!-- Preloader Start Here -->
-    <div id="preloader"></div>
-    <!-- Preloader End Here -->
-    <div id="main-wrapper" class="main-wrapper">
-      <!--=====================================-->
-      <!--=        Header Area Start       	=-->
-      <!--=====================================-->
-      <header class="header axil-header header-style-1">
-        <div id="axil-sticky-placeholder"></div>
-        <div class="axil-mainmenu">
-          <div class="container">
-            <div class="header-navbar">
-              <div class="header-logo">
-                <a href="/"><img
-                    class="light-version-logo"
-                    src="/assets/media/Varients/SVG/conglobase_original.svg"
-                    alt="logo"
-                    style="width: 200px;"
-                  /></a>
-                <a href="/"><img
-                    class="dark-version-logo"
-                    src="/assets/media/Varients/SVG/conglobase_white.svg"
-                    alt="logo"
-                    style="width: 160px;"
-                  /></a>
-                <a href="/"><img
-                    class="sticky-logo"
-                    src="/assets/media/Varients/SVG/conglobase_dark_grey.svg"
-                    alt="logo3"
-                    style="width: 160px;"
-                  /></a>
+</head>
+
+<body class="sticky-header">
+  <a href="#main-wrapper" id="backto-top" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="far fa-angle-double-up"></i>
+  </a>
+  <!-- Preloader Start Here -->
+  <div id="preloader"></div>
+  <!-- Preloader End Here -->
+  <div id="main-wrapper" class="main-wrapper">
+    <!--=====================================-->
+    <!--=        Header Area Start       	=-->
+    <!--=====================================-->
+    <header class="header axil-header header-style-1">
+      <div id="axil-sticky-placeholder"></div>
+      <div class="axil-mainmenu">
+        <div class="container">
+          <div class="header-navbar">
+            <div class="header-logo">
+              <a href="/"><img class="light-version-logo" src="/assets/media/Varients/SVG/conglobase_original.svg"
+                  alt="logo" style="width: 200px;" /></a>
+              <a href="/"><img class="dark-version-logo" src="/assets/media/Varients/SVG/conglobase_white.svg"
+                  alt="logo" style="width: 160px;" /></a>
+              <a href="/"><img class="sticky-logo" src="/assets/media/Varients/SVG/conglobase_dark_grey.svg" alt="logo3"
+                  style="width: 160px;" /></a>
+            </div>
+            <div class="header-main-nav">
+              <!-- Start Mainmanu Nav -->
+              <nav class="mainmenu-nav" id="mobilemenu-popup">
+                <div class="d-block d-lg-none">
+                  <div class="mobile-nav-header">
+                    <div class="mobile-nav-logo">
+                      <a href="/">
+                        <img class="light-mode" src="/assets/media/Varients/SVG/conglobase_dark_grey.svg" alt="conglobase" style="width: 160px;" />
+                        <img class="dark-mode" src="/assets/media/Varients/SVG/conglobase_white.svg" alt="conglobase" style="width: 160px;" />
+                      </a>
+                    </div>
+                    <button class="mobile-menu-close" data-bs-dismiss="offcanvas"><i class="fas fa-times"></i></button>
+                  </div>
+                </div>
+                <ul class="mainmenu">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="/services">Services</a>
+                    <ul class="axil-submenu w-950 row row-cols-6 g-1">
+                      {{#each categories}}
+                      <li class="col p-2">
+                        <ul class="p-0">
+                          <li><b>{{this.name}}</b></li>
+                          {{#each this.services}}
+                          <li class="list-group-item">
+                            <a href="/services/{{this.slug}}">
+                              {{this.title}}
+                            </a>
+                          </li>
+                          {{/each}}
+                        </ul>
+                      </li>
+                      {{/each}}
+                    </ul>
+                    {{!--
+                  <li><a href="/services/details">{{this.service}}</a></li> --}}
+                  </li>
+                  {{!-- <li class="menu-item-has-children">
+                    <a href="/portfolios/">Portfolios</a>
+                    <ul class="axil-submenu">
+                      <li><a href="/portfolios/portfoliodetails">Two Column</a></li>
+                    </ul>
+                  </li> --}}
+                  {{!-- <li class="menu-item-has-children">
+                    <a href="/blogs">Blogs</a>
+                    <ul class="axil-submenu">
+                      <li><a href="/blogs/blog-with-id">Blog details</a></li>
+                    </ul>
+                  </li> --}}
+                  <li><a href="/about">About Us</a></li>
+                  <li class=""><a href="/contact" class="p-0 ">Get Free Consultation</a></li>
+                </ul>
+              </nav>
+              <!-- End Mainmanu Nav -->
+            </div>
+            <div class="header-action">
+              <ul class="list-unstyled">
+                <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
+                  <button class="btn-wrap" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu-popup">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {{{body}}}
+
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-social-link">
+            <ul class="list-unstyled justify-content-center">
+              <li class="p-3 m-2"><a href="https://facebook.com/" data-sal="slide-up" data-sal-duration="500"
+                  data-sal-delay="100"><i class="fab fa-facebook-f text-primary"></i></a></li>
+              <li class="p-3 m-2"><a href="https://twitter.com/" data-sal="slide-up" data-sal-duration="500"
+                  data-sal-delay="200"><i class="fab fa-twitter text-info"></i></a></li>
+              <li class="p-3 m-2"><a href="https://www.linkedin.com/" data-sal="slide-up" data-sal-duration="500"
+                  data-sal-delay="400"><i class="fab fa-linkedin-in text-primary"></i></a></li>
+              <li class="p-3 m-2"><a href="https://www.instagram.com/" data-sal="slide-up" data-sal-duration="500"
+                  data-sal-delay="500"><i class="fab fa-instagram text-danger"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="row">
+            <div class="col-xl-6 col-lg-5" data-sal="slide-right" data-sal-duration="800" data-sal-delay="100">
+              <div class="footer-widget border-end">
+                <div class="footer-newsletter">
+                  <h2 class="title">Get in touch!</h2>
+                  <p>We are your one-stop solution for all your Web
+                    Development and Designing needs. Our team of expert developers is
+                    dedicated to creating visually stunning and fully
+                    functional websites that are tailored to your specific
+                    business requirements.</p>
+                  <form method="post" action="/subscribe">
+                    <div class="input-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email address" />
+                      <button class="subscribe-btn" type="submit">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
               </div>
-              <div class="header-main-nav">
-                <!-- Start Mainmanu Nav -->
-                <nav class="mainmenu-nav" id="mobilemenu-popup">
-                  <div class="d-block d-lg-none">
-                    <div class="mobile-nav-header">
-                      <div class="mobile-nav-logo">
-                        <a href="/">
-                          <img
-                            class="light-mode"
-                            src="/assets/media/logo.svg"
-                            alt="conglobase"
-                            style="width: 160px;"
-                          />
-                          <img
-                            class="dark-mode"
-                            src="/assets/media/logo.svg"
-                            alt="conglobase"
-                            style="width: 160px;"
-                          />
-                        </a>
-                      </div>
-                      <button
-                        class="mobile-menu-close"
-                        data-bs-dismiss="offcanvas"
-                      ><i class="fas fa-times"></i></button>
+            </div>
+            <div class="col-xl-6 col-lg-7" data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="footer-widget">
+                    <h6 class="widget-title">Company</h6>
+                    <div class="footer-menu-link">
+                      <ul class="list-unstyled">
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/media">Press</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-and-conditions">Terms of Use</a></li>
+                      </ul>
                     </div>
                   </div>
-                  <ul class="mainmenu">
-                    <li>
-                      <a href="/">Home</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="/services">Services</a>
-                      <ul class="axil-submenu">
-                        <li><a href="/services/details">Service</a></li>
+                </div>
+                <div class="col-sm-4">
+                  <div class="footer-widget">
+                    <h6 class="widget-title">Services</h6>
+                    <div class="footer-menu-link">
+                      <ul class="list-unstyled">
+                        {{#each categories}}
+                        <li><a href="/services#{{this.slug}}">{{this.name}}</a></li>
+                        {{/each}}
                       </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="/portfolios/">Portfolios</a>
-                      <ul class="axil-submenu">
-                        <li><a href="/portfolios/portfoliodetails">Two Column</a></li>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="footer-widget">
+                    <h6 class="widget-title">Resources</h6>
+                    <div class="footer-menu-link">
+                      <ul class="list-unstyled">
+                        {{!-- <li><a href="/blogs">Blogs</a></li> --}}
+                        <li><a href="/services">Case Studies</a></li>
+                        <li><a href="/portfolios">Portfolios</a></li>
+                        <li><a href="/about"></a></li>
                       </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="/blogs">Blogs</a>
-                      <ul class="axil-submenu">
-                        <li><a href="/blogs/blog-with-id">Blog details</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="/about">About Us</a></li>
-                    <li class=""><a href="/contact" class="p-0 ">Get Free Consultation</a></li>
-                  </ul>
-                </nav>
-                <!-- End Mainmanu Nav -->
+                    </div>
+                  </div>
+                </div>
+                
               </div>
-              <div class="header-action">
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom" data-sal="slide-up" data-sal-duration="500" data-sal-delay="100">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="footer-copyright">
+                <span class="copyright-text">© 2023. All rights reserved by
+                  <a href="">Conglobase</a>.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-bottom-link">
                 <ul class="list-unstyled">
-                  <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
-                    <button
-                      class="btn-wrap"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#mobilemenu-popup"
-                    >
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </button>
-                  </li>
+                  <li><a href="privacy-policy">Privacy Policy</a></li>
+                  <li><a href="terms-and-conditions">Terms of Use</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </footer>
+  </div>
 
-      {{{body}}}
-
-      <!--=====================================-->
-      <!--=        Footer Area Start       	=-->
-      <!--=====================================-->
-      <footer class="footer-area">
-        <div class="container">
-          <div class="footer-top">
-            <div class="footer-social-link">
-              <ul class="list-unstyled justify-content-center">
-                <li class="p-3 m-2"><a
-                    href="https://facebook.com/"
-                    data-sal="slide-up"
-                    data-sal-duration="500"
-                    data-sal-delay="100"
-                  ><i class="fab fa-facebook-f text-primary"></i></a></li>
-                <li class="p-3 m-2"><a
-                    href="https://twitter.com/"
-                    data-sal="slide-up"
-                    data-sal-duration="500"
-                    data-sal-delay="200"
-                  ><i class="fab fa-twitter text-info"></i></a></li>
-                <li class="p-3 m-2"><a
-                    href="https://www.linkedin.com/"
-                    data-sal="slide-up"
-                    data-sal-duration="500"
-                    data-sal-delay="400"
-                  ><i class="fab fa-linkedin-in text-primary"></i></a></li>
-                <li class="p-3 m-2"><a
-                    href="https://www.instagram.com/"
-                    data-sal="slide-up"
-                    data-sal-duration="500"
-                    data-sal-delay="500"
-                  ><i class="fab fa-instagram text-danger"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-main">
-            <div class="row">
-              <div
-                class="col-xl-6 col-lg-5"
-                data-sal="slide-right"
-                data-sal-duration="800"
-                data-sal-delay="100"
-              >
-                <div class="footer-widget border-end">
-                  <div class="footer-newsletter">
-                    <h2 class="title">Get in touch!</h2>
-                    <p>we are your one-stop solution for all your Web
-                      Development and Designing needs. Our team of expert developers is
-                      dedicated to creating visually stunning and fully
-                      functional websites that are tailored to your specific
-                      business requirements.</p>
-                    <form>
-                      <div class="input-group">
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="Email address"
-                        />
-                        <button
-                          class="subscribe-btn"
-                          type="submit"
-                        >Subscribe</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col-xl-6 col-lg-7"
-                data-sal="slide-left"
-                data-sal-duration="800"
-                data-sal-delay="100"
-              >
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="footer-widget">
-                      <h6 class="widget-title">Services</h6>
-                      <div class="footer-menu-link">
-                        <ul class="list-unstyled">
-                          {{#each services}}
-                          <li><a href="/services/{{this.title}}">{{this.title}}</a></li>
-                          {{/each}}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="footer-widget">
-                      <h6 class="widget-title">Other links</h6>
-                      <div class="footer-menu-link">
-                        <ul class="list-unstyled">
-                          {{!-- <li><a href="/blogs">Blogs</a></li> --}}
-                          <li><a href="/services">Case Studies</a></li>
-                          <li><a href="/portfolios">Portfolios</a></li>
-                          <li><a href="/about">About-us</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="footer-widget">
-                      <h6 class="widget-title">Support</h6>
-                      <div class="footer-menu-link">
-                        <ul class="list-unstyled">
-                          <li><a href="/contact">Contact</a></li>
-                          <li><a href="/privacy-policy">Privacy Policy</a></li>
-                          <li><a href="/terms&condition">Terms of Use</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="footer-bottom"
-            data-sal="slide-up"
-            data-sal-duration="500"
-            data-sal-delay="100"
-          >
-            <div class="row">
-              <div class="col-md-6">
-                <div class="footer-copyright">
-                  <span class="copyright-text">© 2023. All rights reserved by
-                    <a href="">Conglobase</a>.</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="footer-bottom-link">
-                  <ul class="list-unstyled">
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-of-use.html">Terms of Use</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Jquery Js -->
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/vendor/bootstrap.min.js"></script>
-    <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="/assets/js/vendor/odometer.min.js"></script>
-    <script src="/assets/js/vendor/jquery-appear.js"></script>
-    <script src="/assets/js/vendor/slick.min.js"></script>
-    <script src="/assets/js/vendor/sal.js"></script>
-    <script src="/assets/js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/js/vendor/js.cookie.js"></script>
-    <script src="/assets/js/vendor/jquery.style.switcher.js"></script>
-    <script src="/assets/js/vendor/jquery.countdown.min.js"></script>
-    <script src="/assets/js/vendor/tilt.js"></script>
-    <script src="/assets/js/vendor/green-audio-player.min.js"></script>
-    <script src="/assets/js/vendor/jquery.nav.js"></script>
-    <!-- Site Scripts -->
-    <script src="/assets/js/app.js"></script>
-  </body>
+  <!-- Jquery Js -->
+  <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/vendor/bootstrap.min.js"></script>
+  <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/js/vendor/odometer.min.js"></script>
+  <script src="/assets/js/vendor/jquery-appear.js"></script>
+  <script src="/assets/js/vendor/slick.min.js"></script>
+  <script src="/assets/js/vendor/sal.js"></script>
+  <script src="/assets/js/vendor/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/vendor/js.cookie.js"></script>
+  <script src="/assets/js/vendor/jquery.style.switcher.js"></script>
+  <script src="/assets/js/vendor/jquery.countdown.min.js"></script>
+  <script src="/assets/js/vendor/tilt.js"></script>
+  <script src="/assets/js/vendor/green-audio-player.min.js"></script>
+  <script src="/assets/js/vendor/jquery.nav.js"></script>
+  <!-- Site Scripts -->
+  <script src="/assets/js/app.js"></script>
+</body>
 
 </html>

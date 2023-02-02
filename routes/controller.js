@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const contactModel = require("../models/contact.model");
 const aboutModel = require("../models/about.model");
 const categoryModel = require("../models/category.model");
+const subscribeModel = require("../models/subscribe.model");
 
 const createContact = async (req, res) => {
     // populating the model
@@ -77,7 +78,8 @@ const createSubscribe = async (req, res) => {
         .save()
         .then((docs) => {
             // sending response with auth token
-            res.json(docs);
+            // res.json(docs);
+            res.redirect("/thanks");
         })
         .catch(({ errors }) => {
             let errKey = Object.keys(errors)[0];
@@ -88,6 +90,7 @@ const createSubscribe = async (req, res) => {
                 });
             } else {
                 return res.sendStatus(400);
+                
             }
         });
 };
