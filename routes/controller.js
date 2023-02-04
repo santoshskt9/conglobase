@@ -4,8 +4,33 @@ const contactModel = require("../models/contact.model");
 const aboutModel = require("../models/about.model");
 const categoryModel = require("../models/category.model");
 const subscribeModel = require("../models/subscribe.model");
+const sendEmailService = require("../service/email");
 
 const createContact = async (req, res) => {
+    try {
+        sendEmailService("santoshskt9@gmail.com", "New request recieved", `
+            <div>
+                <p>Dear <b>Santosh</b>,</p>
+                <br/>
+                <p>You have recieve new contact, please read below message to identify the purpose of contact.</p>
+                <br/>
+                <h3>Subject: ${req.body.subject}</h3>
+                <br/>
+                <h3>Message</h3>
+                <p>${req.body.message}</p>
+                <br/>
+                <h5>Thanks,</h5>
+                <p><b>Name: </b>${req.body.name}</p>
+                <p><b>Contact: </b>${req.body.contact}</p>
+                <img src="https://www.conglobase.com/assets/media/Varients/4x/conglobase_originalxxxhdpi.png" width="160px" />
+                <br/>
+                <p>This is system generated email, don't reply.</>
+            </div
+        `);
+    } catch(error) {
+        console.log("Email Service failed, Can't send new lead contact.");
+        console.log("Email Service Error: ", error);
+    }
     // populating the model
     const contact = new contactModel(req.body);
     contact
