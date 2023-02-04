@@ -3,6 +3,7 @@ const serviceModel = require("../models/service.model");
 const { createContact, createCategory, createSubscribe } = require("./controller");
 const Router = require("express").Router();
 
+
 let categories = {};
 let services = {};
 async function LoadData() {
